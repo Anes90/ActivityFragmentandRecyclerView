@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
-import com.example.activityfragmentandrecyclerview.databinding.FirstFragmentBinding
+import androidx.navigation.fragment.findNavController
 
 class FirstFragment : Fragment() {
     override fun onCreateView(
@@ -16,19 +15,20 @@ class FirstFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        //val view: View = inflater.inflate(R.layout.first_fragment, container, false)
-        //val myButton: Button = view.findViewById(toSecondFragment)
-        //return view
+        val view: View = inflater.inflate(R.layout.first_fragment, container, false)
+        val myButton: Button = view.findViewById(R.id.toSecondFragment)
+        myButton.setOnClickListener {
+            //Navigation.createNavigateOnClickListener(R.id.action_firstFragment_to_secondFragment)
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        }
+        return view
 
-        val binding: FirstFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.first_fragment, container, false)
-        binding.toSecondFragment.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_firstFragment_to_secondFragment)
-        )
+        //val binding: FirstFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.first_fragment, container, false)
         //val binding: FirstFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.first_fragment, container, false)
         //binding.btnToSecondFragment.setOnClickListener { view : View ->
         //    view.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
         //}
-        return binding.root
+        //return binding.root
     }
 
     //override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
