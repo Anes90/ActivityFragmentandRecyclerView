@@ -11,15 +11,10 @@
         android:label="FragmentOne" >
         <action
             android:id="@+id/action_fragmentOne_to_secondActivity"
-            app:destination="@id/secondActivity" />
+            app:destination="@id/secondActivity2" />
     </fragment>
-    <fragment
-        android:id="@+id/fragmentTwo"
-        android:name="com.example.navigationbetweenfragments.FragmentTwo"
-        android:label="FragmentTwo" />
     <activity
-        android:id="@+id/secondActivity"
+        android:id="@+id/secondActivity2"
         android:name="com.example.activityfragmentandrecyclerview.SecondActivity"
-        android:label="activity_second"
-        tools:layout="@layout/activity_second" />
+        android:label="SecondActivity" />
 </navigation>
