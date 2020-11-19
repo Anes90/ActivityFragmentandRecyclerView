@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import androidx.navigation.Navigation
 import com.example.activityfragmentandrecyclerview.databinding.FirstFragmentBinding
 
 class FirstFragment : Fragment() {
@@ -16,15 +16,18 @@ class FirstFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
+        //val view: View = inflater.inflate(R.layout.first_fragment, container, false)
+        //val myButton: Button = view.findViewById(toSecondFragment)
+        //return view
 
-        //val binding: FirstFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.first_fragment, container, false)
-        //binding.btnToSecondFragment.setOnClickListener(
-        //        Navigation.createNavigateOnClickListener(R.id.action_firstFragment_to_secondFragment)
-        //)
         val binding: FirstFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.first_fragment, container, false)
-        binding.btnToSecondFragment.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
-        }
+        binding.toSecondFragment.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_firstFragment_to_secondFragment)
+        )
+        //val binding: FirstFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.first_fragment, container, false)
+        //binding.btnToSecondFragment.setOnClickListener { view : View ->
+        //    view.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        //}
         return binding.root
     }
 
