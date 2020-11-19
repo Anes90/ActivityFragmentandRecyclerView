@@ -10,7 +10,7 @@
         android:id="@+id/buttonFirstFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/navigate_to_the_second_fragment"
+        android:text="@string/navigate_to_the_second_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

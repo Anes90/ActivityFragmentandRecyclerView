@@ -18,7 +18,7 @@ class FragmentOne : Fragment(){
        val myButton: Button = myView.findViewById(R.id.buttonFirstFragment)
 
        myButton.setOnClickListener {
-           findNavController().navigate(R.id.action_fragmentOne_to_fragmentTwo)
+           findNavController().navigate(R.id.action_fragmentOne_to_secondActivity)
        }
         // Inflate the layout for this fragment
         return myView
