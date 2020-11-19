@@ -1,11 +1,17 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
+
+    buildFeatures{
+        viewBinding true
+        dataBinding true
+    }
 
     defaultConfig {
         applicationId "com.example.activityfragmentandrecyclerview"
@@ -45,4 +51,5 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
+    kapt "com.android.databinding:compiler:$gradleVersion"
 }
