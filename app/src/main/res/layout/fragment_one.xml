@@ -6,13 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/buttonFirstFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/second_fragment_title"
-        android:textAlignment="center"
-        android:textSize="36sp"
+        android:text="@string/navigate_to_the_second_fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

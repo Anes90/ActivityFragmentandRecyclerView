@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">Activity Fragment and RecyclerView</string>
-    <string name="title_activity">Go to Second Activity</string>
-    <string name="title_fragment">Go to Second Fragment</string>
-    <string name="second_fragment_title">You are looking at the Second Fragment</string>
-    <string name="first_fragment_centent_text">First fragment</string>
+    <string name="app_name">Navigation Between Fragments</string>
+    <string name="navigate_to_the_second_fragment">Navigate to the second fragment</string>
+    <string name="welcome_to_fragment_two">Welcome to Fragment Two</string>
 </resources>
